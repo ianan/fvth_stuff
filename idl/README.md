@@ -1,0 +1,5 @@
+# fvth_stuff/idl
+Some tests with the isothermal model in sswidl, f_vth, especially with the lookup table files created from CHIANTI, i.e.
+
+* [make\_new\_ch\_files.pro](https://github.com/ianan/fvth_stuff/blob/main/idl/make_new_ch_files.pro): Makes the new continuum and lines file (uses my tweaked version of [setup\_chianti\_lines.pro](https://github.com/ianan/fvth_stuff/blob/main/idl/setup_chianti_lines.pro) as chianti\_verion bug and missing geny out in sswidl [version](https://hesperia.gsfc.nasa.gov/ssw/packages/xray/idl/setup_chianti_lines.pro))
+* [check\_fvth\_model.pro](https://github.com/ianan/fvth_stuff/blob/main/idl/check_fvth_model.pro): Load in current sunxspex version (v7.1), ospex (v9.1) and newly generated (v10.0.2) and compare the f_vth() models output is [test\_ch\_fvth\_v7910.pdf](https://github.com/ianan/fvth_stuff/blob/main/idl/test_ch_fvth_v7910.pdf).
