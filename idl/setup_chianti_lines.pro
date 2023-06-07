@@ -26,7 +26,7 @@ function setup_chianti_lines, ioneq,  kmin, kmax, temp_range,$
   ntemp=ntemp, nelem=nelem, savfile=savfile, genxfile=genxfile, $
   overwrite=overwrite
 
-  default, savfile, 'chianti_lines.sav'
+  default, savfile, ''
   default, genxfile, 'chianti_lines.geny'
   default, overwrite, 0
   default, nelem, 30
@@ -93,18 +93,18 @@ function setup_chianti_lines, ioneq,  kmin, kmax, temp_range,$
       density=edensity, no_sum_int=no_sum_int, logt_isothermal=alog10(temp), $
       logem_isothermal=dblarr(nt)
 
-
     ;yohkoh_rel_abun = mk_rel_abun() ;default is yohkoh-mewe/chianti-solar-coronal
     ; Change the next couple of lines as chianti_version is a program not a function
-    chianti_version, chianti_version
-    cversion = chianti_version
+    chianti_version, cversion
+    cversion = cversion[0]
 
-    chianti_doc = { ion_file: ioneq_name, ion_ref: ion_ref, version: cversion}
+    chianti_doc = {ion_file: ioneq_name, ion_ref: ion_ref, version: cversion}
 
-;    save,/compress, zindex, out, chianti_doc, file=savfile
-;    Using genx here as that is what f_vth/chianti_kev calls by default
+    if savfile ne '' then $
+      save,/compress, zindex, out, chianti_doc, file=savfile
+    ;    Using genx here as that is what f_vth/chianti_kev calls by default
     savegenx, zindex,  out, chianti_doc, $
-        file=genxfile, /overwrite
+      file=genxfile, /overwrite
   endif
 
   return, fcount ge 1 ? foundfile[0] : savfile
