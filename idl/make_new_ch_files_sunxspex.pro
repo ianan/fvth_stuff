@@ -15,12 +15,13 @@ pro make_new_ch_files_sunxspex
   ;   use 300 (cont) or 750 (lines) over logT 6-9 !!!!
   ;
   ; Presumably changed made as v7->v9 adds a lot more lines and files would be huge?
-  ; 
+  ;
   ; Stick with consistent with newer IDL/f_vth and check if that works......
   ;
   ; 02-Jun-2023 IGH
   ; 06-Jun-2023 IGH, changed setup*.pro to save out, and chianti_version is str not array
-  ; 
+  ; 11-Jul-2023 IGH, now with CHIANTI 10.1 (dbase/VERSION, though 10.2 idl/VERSION ???)
+  ;
   ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   conversion= 12.39854
   chxdb= concat_dir(getenv('SSWDB_XRAY'),'chianti/')
@@ -35,12 +36,16 @@ pro make_new_ch_files_sunxspex
   ;;  % RESTORE: Restored variable: EDGE_STR.
   ;;  % RESTORE: Restored variable: CTEMP.
   ;;  % RESTORE: Restored variable: CHIANTI_DOC.
-  
+
   ; Now make new version and save geny and savfil using my version
   ; which also makes sure chianti_verion in the output is a string not array
+  ;  contfile=setup_chianti_cont('CHIANTI',1,250,$
+  ;    genxfile='chianti_cont_1_250_unity_v1002_t41.geny',$
+  ;    savfile='chianti_cont_1_250_unity_v1002_t41.sav')
+
   contfile=setup_chianti_cont('CHIANTI',1,250,$
-    genxfile='chianti_cont_1_250_unity_v1002_t41.geny',$
-    savfile='chianti_cont_1_250_unity_v1002_t41.sav')
+    genxfile='chianti_cont_1_250_unity_v101_t41.geny',$
+    savfile='chianti_cont_1_250_unity_v101_t41.sav')
 
   ;  ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;  ; For Lines
@@ -57,9 +62,13 @@ pro make_new_ch_files_sunxspex
   ;  ; For lines using my modified/bug fixed version of setup_chinait_lines.pro
   ;  ; as chianti_version bug and by default was saving a savfile
   ;  ; Also default is MOZZATTA ioneq but should be CHIANTI?
+  ;  linefile=setup_chianti_lines('CHIANTI',1,12,ntemp=41,$
+  ;    genxfile='chianti_lines_1_12_unity_v1002_t41.geny',$
+  ;    savfile='chianti_lines_1_12_unity_v1002_t41.sav')
+
   linefile=setup_chianti_lines('CHIANTI',1,12,ntemp=41,$
-    genxfile='chianti_lines_1_12_unity_v1002_t41.geny',$
-    savfile='chianti_lines_1_12_unity_v1002_t41.sav')
+    genxfile='chianti_lines_1_12_unity_v101_t41.geny',$
+    savfile='chianti_lines_1_12_unity_v101_t41.sav')
 
   stop
 end
