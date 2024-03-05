@@ -1,6 +1,8 @@
 # fvth_stuff/better_chxdb
 A potentially more optimal CHIANTI generated files to be used with thermal model in ospex and sunkit-spex.
 
+**[OneDrive directory](https://gla-my.sharepoint.com/:f:/g/personal/iain_hannah_glasgow_ac_uk/EuS5k4kGdL9GmUCr1cHOevoBebACkZElrCXpOSmdXPGZyQ?e=rNWnFE) with the new save files from 0.1 keV and 1 keV (also in this repo).**
+
 Can of course run the sswidl scripts with different temperature or photon energy range if needed for your fits, i.e. fitting < 1 keV photon energies. This could result in larger files (especially the line files) and more temperature bins might be needed if expanding temperature range (to avoid issue of fitted temperatures clustering with the 41 temperature bin versions).
 
 * **[better_v10_ch_files.pro](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/better_v10_ch_files.pro)**: sswidl script to run [setup_chianti_lines.pro](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/setup_chianti_lines.pro) and [setup_chianti_cont.pro](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/setup_chianti_cont.pro) 
