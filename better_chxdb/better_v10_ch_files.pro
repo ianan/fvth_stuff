@@ -21,6 +21,16 @@ pro better_v10_ch_files
   conversion= 12.39854
   chxdb= concat_dir(getenv('SSWDB_XRAY'),'chianti/')
   ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  ;; Try over a wider temperature range
+  contfile=setup_chianti_cont('CHIANTI',1,250,[0.1, 100.]*1e6,ntemp=71,$
+    genxfile='chianti_cont_1_250_unity_v101_t71_tr58.geny',$
+    savfile='chianti_cont_1_250_unity_v101_t71_tr58.sav')
+  linefile=setup_chianti_lines('CHIANTI',1,12,[0.1, 100.]*1e6,ntemp=71,$
+    genxfile='chianti_lines_1_12_unity_v101_t71_tr58.geny',$
+    savfile='chianti_lines_1_12_unity_v101_t71_tr58.sav')
+    
+  stop
   ;  ;; OK files: 8MB (sav)
   contfile=setup_chianti_cont('CHIANTI',0.1,250,ntemp=71,$
     genxfile='chianti_cont_01_250_unity_v101_t71.geny',$
