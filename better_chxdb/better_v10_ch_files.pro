@@ -21,23 +21,25 @@ pro better_v10_ch_files
   conversion= 12.39854
   chxdb= concat_dir(getenv('SSWDB_XRAY'),'chianti/')
   ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;  ;  ;; OK files: 8MB (sav)
-;  contfile=setup_chianti_cont('CHIANTI',0.1,250,ntemp=71,$
-;    genxfile='chianti_cont_01_250_unity_v101_t71.geny',$
-;    savfile='chianti_cont_01_250_unity_v101_t71.sav')
-;  ;; OK files: 491MB (sav)
-;  linefile=setup_chianti_lines('CHIANTI',0.1,12,ntemp=71,$
-;    genxfile='chianti_lines_01_12_unity_v101_t71.geny',$
-;    savfile='chianti_lines_01_12_unity_v101_t71.sav')
+  ;  ;; OK files: 8MB (sav)
+  contfile=setup_chianti_cont('CHIANTI',0.1,250,ntemp=71,$
+    genxfile='chianti_cont_01_250_unity_v101_t71.geny',$
+    savfile='chianti_cont_01_250_unity_v101_t71.sav')
+  ;; OK files: 491MB (sav)
+  linefile=setup_chianti_lines('CHIANTI',0.1,12,ntemp=71,$
+    genxfile='chianti_lines_01_12_unity_v101_t71.geny',$
+    savfile='chianti_lines_01_12_unity_v101_t71.sav')
 
-    ;; OK files: 8MB (sav)
-    contfile=setup_chianti_cont('CHIANTI',1,250,ntemp=71,$
-      genxfile='chianti_cont_1_250_unity_v101_t71.geny',$
-      savfile='chianti_cont_1_250_unity_v101_t71.sav')
-    ;; OK files: 80MB (sav)
-    linefile=setup_chianti_lines('CHIANTI',1,12,ntemp=71,$
-      genxfile='chianti_lines_1_12_unity_v101_t71.geny',$
-      savfile='chianti_lines_1_12_unity_v101_t71.sav')
+  stop
+
+  ;; OK files: 8MB (sav)
+  contfile=setup_chianti_cont('CHIANTI',1,250,ntemp=71,$
+    genxfile='chianti_cont_1_250_unity_v101_t71.geny',$
+    savfile='chianti_cont_1_250_unity_v101_t71.sav')
+  ;; OK files: 80MB (sav)
+  linefile=setup_chianti_lines('CHIANTI',1,12,ntemp=71,$
+    genxfile='chianti_lines_1_12_unity_v101_t71.geny',$
+    savfile='chianti_lines_1_12_unity_v101_t71.sav')
 
   ;;   OK files: 26MB (geny) and 23MB (sav)
   ;  contfile=setup_chianti_cont('CHIANTI',1,250,ntemp=200,$
