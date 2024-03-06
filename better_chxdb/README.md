@@ -15,4 +15,7 @@ Can of course run the sswidl scripts with different temperature or photon energy
 * **[ospex_fit_example.pro](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/ospex_fit_example.pro)**: ospex fit example using the new v10.1 CHIANTI files with 71 temperature bins, resulting fit plot is [ospex_20030725_082634.pdf](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/ospex_20030725_082634.pdf).
 * **[sunkit_spex_fit_example.ipynb](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/sunkit_spex_fit_example.ipynb)**: sunkit-spex fit example using the new v10.1 CHIANTI files with 71 temperature bins, resulting fir plot is [sunkit_spex_20030725_082642.pdf](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/sunkit_spex_20030725_082642.pdf).
 
+**Note:** To change files in sswidl/ospex just do `chianti_kev_common_load, contfile = 'chianti_cont_1_250_unity_v101_t71.sav', $
+linefile = 'chianti_lines_1_12_unity_v101_t71.sav', /reload`
+
 ---
