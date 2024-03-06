@@ -1,5 +1,4 @@
 pro ospex_fit_example
-  compile_opt idl2
 
   ; ; Fit a RHESSI microflare spectra (attenuator out) using the
   ; ; new v10.1 N_T=71 CHIANTI database files
@@ -46,41 +45,41 @@ pro ospex_fit_example
 
   set_logenv, 'OSPEX_NOINTERACTIVE', '1'
   o = ospex()
-  o.set, spex_fit_manual = 0, spex_fit_reverse = 0, spex_fit_start_method = 'previous_int'
-  o.set, spex_autoplot_enable = 0, spex_fitcomp_plot_resid = 0, spex_fit_progbar = 0
+  o->set, spex_fit_manual = 0, spex_fit_reverse = 0, spex_fit_start_method = 'previous_int'
+  o->set, spex_autoplot_enable = 0, spex_fitcomp_plot_resid = 0, spex_fit_progbar = 0
 
-  o.set, fit_function = 'vth+thick2'
-  o.set, fit_comp_spectrum = ['full', '']
-  o.set, fit_comp_model = ['chianti', '']
+  o->set, fit_function = 'vth+thick2'
+  o->set, fit_comp_spectrum = ['full', '']
+  o->set, fit_comp_model = ['chianti', '']
 
-  o.set, spex_summ_uncert = uncert
-  o.set, mcurvefit_itmax = max_iter
-  o.set, mcurvefit_tol = tolerance
+  o->set, spex_summ_uncert = uncert
+  o->set, mcurvefit_itmax = max_iter
+  o->set, mcurvefit_tol = tolerance
 
   fitsdir = '../../rhessi_spectra/mfstats9_fits/'
 
-  o.set, spex_specfile = fitsdir + break_time(fpeak) + '_spec_sum_org.fits'
-  o.set, spex_drmfile = fitsdir + break_time(fpeak) + '_srm_sum_org.fits'
-  o.set, spex_fit_time_interval = ftims
-  o.set, spex_bk_time_interval = btims
-  o.set, spex_bk_order = 0
-  o.set, fit_comp_minima = fitmin
-  o.set, fit_comp_maxima = fitmax
+  o->set, spex_specfile = fitsdir + break_time(fpeak) + '_spec_sum_org.fits'
+  o->set, spex_drmfile = fitsdir + break_time(fpeak) + '_srm_sum_org.fits'
+  o->set, spex_fit_time_interval = ftims
+  o->set, spex_bk_time_interval = btims
+  o->set, spex_bk_order = 0
+  o->set, fit_comp_minima = fitmin
+  o->set, fit_comp_maxima = fitmax
 
-  o.set, spex_erange = [4, 8]
-  o.set, fit_comp_free = [1, 1, 0, 0, 0, 0, 0, 0, 0]
-  o.set, fit_comp_param = fitstart
-  o.dofit
+  o->set, spex_erange = [4, 8]
+  o->set, fit_comp_free = [1, 1, 0, 0, 0, 0, 0, 0, 0]
+  o->set, fit_comp_param = fitstart
+  o->dofit
 
-  o.set, spex_erange = [9, 20]
-  o.set, fit_comp_free = [0, 0, 0, 1, 1, 0, 0, 1, 0]
-  o.dofit
-  o.set, spex_erange = [4, 20]
-  o.set, fit_comp_free = [1, 1, 0, 1, 1, 0, 0, 1, 0]
-  o.dofit
+  o->set, spex_erange = [9, 20]
+  o->set, fit_comp_free = [0, 0, 0, 1, 1, 0, 0, 1, 0]
+  o->dofit
+  o->set, spex_erange = [4, 20]
+  o->set, fit_comp_free = [1, 1, 0, 1, 1, 0, 0, 1, 0]
+  o->dofit
 
-  p = o.get(/spex_summ_params)
-  perr = o.get(/spex_summ_sigmas)
+  p = o->get(/spex_summ_params)
+  perr = o->get(/spex_summ_sigmas)
 
   tmkstr = string(p[1] / tmk2kev, format = '(f5.2)') + ' MK'
   em49 = p[0] * 1d49
@@ -91,12 +90,12 @@ pro ospex_fit_example
   delstr = '!Md!3: ' + string(p[4], format = '(f5.2)')
   ecstr = string(p[7], format = '(f5.2)') + ' keV'
 
-  dd = o.getdata(class = 'spex_fitint', spex_units = 'flux')
-  fit = o.calc_func_components(spex_units = 'flux', /all_func)
+  dd = o->getdata(class = 'spex_fitint', spex_units = 'flux')
+  fit = o->calc_func_components(spex_units = 'flux', /all_func)
   ee = fit.ct_energy
-  chisq = o.get(/spex_summ_chisq)
-  mide = o.getaxis(/ct_energy)
-  erange = o.get(/spex_erange)
+  chisq = o->get(/spex_summ_chisq)
+  mide = o->getaxis(/ct_energy)
+  erange = o->get(/spex_erange)
 
   ftot = fit.yvals[*, 0]
   fth = fit.yvals[*, 1]
