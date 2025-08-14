@@ -1,16 +1,16 @@
 pro ospex_fit_example
 
   ; ; Fit a RHESSI microflare spectra (attenuator out) using the
-  ; ; new v10.1 N_T=71 CHIANTI database files
+  ; ; new v11.02 N_T=101 CHIANTI database files
   ; ;
   ; ;
-  ; ; 14-Feb-2024 IGH
+  ; ; 13-Aug-2025 IGH
   ; ;
   ; ;------------------------------------------------------------
 
   ; ; Want to use the new files not the default ones
-  chianti_kev_common_load, contfile = 'chianti_cont_1_250_unity_v101_t71.sav', $
-    linefile = 'chianti_lines_1_12_unity_v101_t71.sav', /reload
+  chianti_kev_common_load, contfile = 'chianti_cont_1_250_unity_v1102_t101.sav', $
+    linefile = 'chianti_lines_2_12_unity_v1102_t101.sav', /reload
   ; ; To change back to the default ones would do
   ; chianti_kev_common_load,contfile=getenv('CHIANTI_CONT_FILE'),linefile=getenv('CHIANTI_LINES_FILE'),/reload
 

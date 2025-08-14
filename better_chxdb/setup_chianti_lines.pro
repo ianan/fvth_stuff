@@ -20,7 +20,8 @@
 ;                    Changed to save out geny (like actual chianti_kev files), via genxfile
 ;                    ioneq default shouldn't be MAZZOTTA?
 ;
-;
+;  31-Jul-2025 IGH - ch_synthetic has changed to default to advanced_model not needing a ionization fraction file
+;                    turns this off via advanced_model=0 to just use previous approach (best way???);
 
 function setup_chianti_lines, ioneq,  kmin, kmax, temp_range,$
   ntemp=ntemp, nelem=nelem, savfile=savfile, genxfile=genxfile, $
@@ -91,7 +92,7 @@ function setup_chianti_lines, ioneq,  kmin, kmax, temp_range,$
       photons=photons, masterlist=masterlist, noprot=noprot, $
       radtemp=radtemp, rphot=rphot, verbose=verbose, progress=progress, $
       density=edensity, no_sum_int=no_sum_int, logt_isothermal=alog10(temp), $
-      logem_isothermal=dblarr(nt)
+      logem_isothermal=dblarr(nt),advanced_model=0
 
     ;yohkoh_rel_abun = mk_rel_abun() ;default is yohkoh-mewe/chianti-solar-coronal
     ; Change the next couple of lines as chianti_version is a program not a function
