@@ -39,19 +39,37 @@ pro better_chxdb_files
     genxfile = 'chianti_lines_1_12_unity_v1102_t101.geny', $
     savfile = 'chianti_lines_1_12_unity_v1102_t101.sav')
 
-  ; smaller file so quicker to work with, don't need < 2keV for RHESSI/STIX/NuSTAR
-  linefile = setup_chianti_lines('CHIANTI', 2, 12, ntemp = 101, $
-    genxfile = 'chianti_lines_2_12_unity_v1102_t101.geny', $
-    savfile = 'chianti_lines_2_12_unity_v1102_t101.sav')
+  ; ; smaller file so quicker to work with, don't need < 2keV for RHESSI/STIX/NuSTAR
+  ; linefile = setup_chianti_lines('CHIANTI', 2, 12, ntemp = 101, $
+  ; genxfile = 'chianti_lines_2_12_unity_v1102_t101.geny', $
+  ; savfile = 'chianti_lines_2_12_unity_v1102_t101.sav')
 
-  ; ; If you need a wider temperature range, here doing logT 5-8
-  contfile = setup_chianti_cont('CHIANTI', 1, 250, [0.1, 100.] * 1e6, ntemp = 101, $
-    genxfile = 'chianti_cont_1_250_unity_v1102_t101.geny', $
-    savfile = 'chianti_cont_1_250_unity_v1102_t101.sav')
+  ; ; going fown to 0.1 keV but bigger files
+  ; contfile=setup_chianti_cont('CHIANTI',0.1,250,ntemp=101,$
+  ; genxfile='chianti_cont_01_250_unity_v1102_t101.geny',$
+  ; savfile='chianti_cont_01_250_unity_v1102_t101.sav')
 
-  linefile = setup_chianti_lines('CHIANTI', 1, 12, [0.1, 100.] * 1e6, ntemp = 101, $
-    genxfile = 'chianti_lines_1_12_unity_v1102_t101.geny', $
-    savfile = 'chianti_lines_1_12_unity_v1102_t101.sav')
+  ; linefile=setup_chianti_lines('CHIANTI',0.1,12,ntemp=101,$
+  ; genxfile='chianti_lines_01_12_unity_v1102_t101.geny',$
+  ; savfile='chianti_lines_01_12_unity_v1102_t101.sav')
+
+  ; ; going fown to 0.7 keV but bigger files
+  ; contfile=setup_chianti_cont('CHIANTI',0.7,250,ntemp=101,$
+  ; genxfile='chianti_cont_07_250_unity_v1102_t101.geny',$
+  ; savfile='chianti_cont_07_250_unity_v1102_t101.sav')
+
+  ; linefile=setup_chianti_lines('CHIANTI',0.7,12,ntemp=101,$
+  ; genxfile='chianti_lines_07_12_unity_v1102_t101.geny',$
+  ; savfile='chianti_lines_07_12_unity_v1102_t101.sav')
+
+  ; ; ; If you need a wider temperature range, here doing logT 5-8
+  ; contfile = setup_chianti_cont('CHIANTI', 1, 250, [0.1, 100.] * 1e6, ntemp = 101, $
+  ; genxfile = 'chianti_cont_1_250_unity_v1102_t101.geny', $
+  ; savfile = 'chianti_cont_1_250_unity_v1102_t101.sav')
+
+  ; linefile = setup_chianti_lines('CHIANTI', 1, 12, [0.1, 100.] * 1e6, ntemp = 101, $
+  ; genxfile = 'chianti_lines_1_12_unity_v1102_t101.geny', $
+  ; savfile = 'chianti_lines_1_12_unity_v1102_t101.sav')
 
   stop
 end
