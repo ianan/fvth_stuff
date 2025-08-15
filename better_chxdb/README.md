@@ -12,7 +12,7 @@ Repo contains sswidl code to produce own files but also provide some here with 1
 * **Also on [OneDrive directory](https://gla-my.sharepoint.com/:f:/g/personal/iain_hannah_glasgow_ac_uk/EuS5k4kGdL9GmUCr1cHOevoBebACkZElrCXpOSmdXPGZyQ?e=rNWnFE)**
 	- From 0.1 keV with CHIANTI v11 with 101 temperature bins over logT= 6 to 8: chianti_cont_01_250_unity_v1102_t101.sav and chianti_lines_01_12_unity_v1102_t101.sav
     - From 0.7 keV with CHIANTI v11 with 101 temperature bins over logT= 6 to 8: chianti_cont_07_250_unity_v1102_t101.sav and chianti_lines_07_12_unity_v1102_t101.sav
-	- From 1 keV with CHIANTI v10.1 with 71 temperature bins for logT= 5 to 8: chianti_cont_1_250_unity_v1102_t101_tr58.sav and chianti_lines_1_12_unity_v1102_t101_tr58.sav
+	- From 1 keV with CHIANTI v11 with 71 temperature bins for logT= 5 to 8: chianti_cont_1_250_unity_v1102_t101_tr58.sav and chianti_lines_1_12_unity_v1102_t101_tr58.sav
 
 * **[ospex_fit_example.pro](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/ospex_fit_example.pro)**: ospex fit example using the new v11 CHIANTI files with 101 temperature bins, resulting fit plot is [ospex_20030725_082634.pdf](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/ospex_20030725_082634.pdf).
 * **[sunkit_spex_fit_example.ipynb](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/sunkit_spex_fit_example.ipynb)**: sunkit-spex fit example using the new v11 CHIANTI files with 101 temperature bins, resulting fir plot is [sunkit_spex_20030725_082642.pdf](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/sunkit_spex_20030725_082642.pdf).
@@ -31,6 +31,22 @@ To change files back to the default in sswidl/ospex just do `chianti_kev_common_
 Table of the chxdb files
 
 | Files | CHIANTI v | Energy Range [keV] | log T (N_T) | Date/Notes
-|----------|----------|----------|----------|----------|
-| chianti_cont_1_250_v52 | 5.2 | 1-200 | 6-8 (200) | 2006-03 (prev OSPEX default) |
-| chianti_lines_1_10_v52 |  5.2 | 1-10 | 6-8 (200) | 2006-03 (prev OSPEX default) |
+|:----------:|:----------:|:----------:|:----------:|:----------:|
+| chianti_cont_1_250_v52 | 5.2 | 1-200 | 6-8 (200) | 2006-03  |
+| chianti_lines_1_10_v52 |  5.2 | 1-10 | 6-8 (200) | 2006-03  |
+| chianti_cont_1_250_v71 | 7.1 | 1-200 | 6-9 (300) | 2015-04 (sunkit-spex default) |
+| chianti_lines_1_10_v71 |  7.1 | 1-10 | 6-9 (750) | 2015-04 (sunkit-spex default) |
+| chianti_cont_01_250_unity_v901 | 9.0.1 | 0.1-111 | 6-9 (41) | 2020-08 (ospex default) |
+| chianti_lines_07_12_unity_v901_t41 |  9.0.1 | 0.7-12 | 6-9 (41) | 2020-08 (ospex default) |
+| chianti_cont_1_250_unity_v1102_t101 | 11.0.2 | 1-250 | 6-8 (101) | 2025-08 (igh made) |
+| chianti_lines_1_12_unity_v1102_t101 |  11.0.2 | 1-12 | 6-8 (101) | 2025-08 (igh made) |
+| chianti_lines_2_12_unity_v1102_t101 |  11.0.2 | 2-12 | 6-8 (101) | 2025-08 (igh made) |
+| chianti_cont_01_250_unity_v1102_t101 | 11.0.2 | 0.1-250 | 6-8 (101) | 2025-08 (igh made) |
+| chianti_lines_01_12_unity_v1102_t101 |  11.0.2 | 0.1-12 | 6-8 (101) | 2025-08 (igh made) |
+| chianti_cont_07_250_unity_v1102_t101 | 11.0.2 | 0.7-250 | 6-8 (101) | 2025-08 (igh made) |
+| chianti_lines_07_12_unity_v1102_t101 |  11.0.2 | 0.7-12 | 6-8 (101) | 2025-08 (igh made) |
+| chianti_cont_1_250_unity_v1102_t101_tr58 | 11.0.2 | 1-250 | 5-8 (101) | 2025-08 (igh made) |
+| chianti_lines_1_12_unity_v1102_t101_tr58 |  11.0.2 | 1-12 | 5-8 (101) | 2025-08 (igh made) |
+
+
+* need to double check these values *
