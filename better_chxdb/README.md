@@ -51,4 +51,4 @@ Table of the chxdb files
 | chianti_lines_1_12_unity_v1102_t101_tr58 |  11.0.2 | 1-12 | 5-8 (101) | 2025-08 (igh made) |
 
 
-* Need to double check the actual energy and temperature range in the files, not just from the naming. *
+*Need to double check the actual energy and temperature range in the files, not just from the naming.*
