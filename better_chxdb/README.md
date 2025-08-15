@@ -19,10 +19,18 @@ Repo contains sswidl code to produce own files but also provide some here with 1
 
 
 
-**Note:** To change files in sswidl/ospex just do `chianti_kev_common_load, contfile = 'chianti_cont_1_250_unity_v1102_t101.sav', $
+**Note:** To change files in sswidl/ospex just 
+`chianti_kev_common_load, contfile = 'chianti_cont_1_250_unity_v1102_t101.sav', $
 linefile = 'chianti_lines_2_12_unity_v1102_t101.sav', /reload`
 
 To change files back to the default in sswidl/ospex just do `chianti_kev_common_load,contfile=getenv('CHIANTI_CONT_FILE'),linefile=getenv('CHIANTI_LINES_FILE'),/reload`
+
+**Note:** To change files in the legacy sunkit-spex code do:
+```
+from sunkit_spex.legacy import thermal
+thermal.CONTINUUM_GRID=thermal.setup_continuum_parameters('chianti_cont_1_250_unity_v1102_t101.sav')
+thermal.LINE_GRID=thermal.setup_line_parameters('chianti_lines_2_12_unity_v1102_t101.sav')
+```
 
 ---
 
