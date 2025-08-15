@@ -31,7 +31,7 @@ To change files back to the default in sswidl/ospex just do `chianti_kev_common_
 Table of the chxdb files
 
 | Files | CHIANTI v | Energy Range [keV] | log T (N_T) | Date/Notes
-|:----------:|:----------:|:----------:|:----------:|:----------:|
+|:----------:|:----------:|:----------:|:----------:|:----------|
 | chianti_cont_1_250_v52 | 5.2 | 1-200 | 6-8 (200) | 2006-03  |
 | chianti_lines_1_10_v52 |  5.2 | 1-10 | 6-8 (200) | 2006-03  |
 | chianti_cont_1_250_v71 | 7.1 | 1-200 | 6-9 (300) | 2015-04 (sunkit-spex default) |
