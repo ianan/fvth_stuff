@@ -17,7 +17,7 @@ Repo contains sswidl code to produce own files but also provide some here with 1
 * **[ospex_fit_example.pro](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/ospex_fit_example.pro)**: ospex fit example using the new v11 CHIANTI files with 101 temperature bins, resulting fit plot is [ospex_20030725_082634.pdf](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/ospex_20030725_082634.pdf).
 * **[sunkit_spex_fit_example.ipynb](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/sunkit_spex_fit_example.ipynb)**: sunkit-spex fit example using the new v11 CHIANTI files with 101 temperature bins, resulting fir plot is [sunkit_spex_20030725_082642.pdf](https://github.com/ianan/fvth_stuff/blob/main/better_chxdb/sunkit_spex_20030725_082642.pdf).
 
-The historical files can be found in [ssw/packages/xray/dbase/chianti/](https://hesperia.gsfc.nasa.gov/ssw/packages/xray/dbase/chianti/).
+
 
 **Note:** To change files in sswidl/ospex just do `chianti_kev_common_load, contfile = 'chianti_cont_1_250_unity_v1102_t101.sav', $
 linefile = 'chianti_lines_2_12_unity_v1102_t101.sav', /reload`
@@ -28,10 +28,12 @@ To change files back to the default in sswidl/ospex just do `chianti_kev_common_
 
 ### Appendix
 
+The historical files can be found in [ssw/packages/xray/dbase/chianti/](https://hesperia.gsfc.nasa.gov/ssw/packages/xray/dbase/chianti/).
+
 Table of the chxdb files
 
-| Files | CHIANTI v | Energy Range [keV] | log T (N_T) | Date/Notes
-|:----------:|:----------:|:----------:|:----------:|:----------|
+| Files | CHIANTI v | Energy Range [keV] | log T ($N_T$) | Date/Notes
+|----------:|:----------:|:----------:|:----------:|:----------|
 | chianti_cont_1_250_v52 | 5.2 | 1-200 | 6-8 (200) | 2006-03  |
 | chianti_lines_1_10_v52 |  5.2 | 1-10 | 6-8 (200) | 2006-03  |
 | chianti_cont_1_250_v71 | 7.1 | 1-200 | 6-9 (300) | 2015-04 (sunkit-spex default) |
