@@ -32,7 +32,7 @@ The historical files can be found in [ssw/packages/xray/dbase/chianti/](https://
 
 Table of the chxdb files
 
-| Files | CHIANTI v | Energy Range [keV] | log T (Num bins) | Date/Notes |
+| Files | CHIANTI ver | Energy Range [keV] | log T (Num bins) | Date/Notes |
 |----------:|:----------:|:----------:|:----------:|:----------|
 | chianti_cont_1_250_v52 | 5.2 | 1-200 | 6-8 (200) | 2006-03  |
 | chianti_lines_1_10_v52 |  5.2 | 1-10 | 6-8 (200) | 2006-03  |
